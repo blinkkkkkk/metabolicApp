@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Latest Test Results
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="name" padding>
+    <ion-list inset>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Metabolic App
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h3>Welcome, {{username}}!</h3>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img src="http://placehold.it/300x200"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+  <br/><br/>
+
+  <ion-item-group>
+    <ion-item-divider style="text-align: center" color="light">Upcoming Tests</ion-item-divider>
+    <ion-item (click)="test1()">Test1</ion-item>
+    <ion-item (click)="test2()">Test2</ion-item>
+    <ion-item style="text-align:center">
+    <button ion-button full outline (click)="send2()" style="border:0px; margin-left: auto; margin-right: auto; display: block">
+      View More <ion-icon style="margin-left: 5px; margin-top: 2px" name="arrow-forward"></ion-icon>
+    </button>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-row style="position: fixed; bottom:0;">
+     <button ion-button class="submit-btn" full outline (click) ="send1()" >View Latest Test Results</button>
+     <!--<button ion-button class="submit-btn" full outline (click)="send2()" >Upcoming</button>-->
+  </ion-row>
+</ion-content>
+
+
+
+
