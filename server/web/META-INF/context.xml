@@ -1,0 +1,13 @@
+<Context path="/metabolism_app">
+    <Resource   name="datasource"
+                type="javax.sql.DataSource"
+                auth="Container"
+                maxActive="10"
+                maxIdle="3"
+                maxWait="10000"
+                username="b927ddccb5ac08"
+                password="30685d51"
+                driverClassName="com.mysql.jdbc.Driver"
+                factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+                url="jdbc:mysql://eu-cdbr-azure-west-d.cloudapp.net:3306/metabolic_app_db_test?autoReconnect=true"/>
+</Context>
