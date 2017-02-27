@@ -1,0 +1,13 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <ul>
+{% for option in options %}
+
+    <li><a href="{{ option.url }}">{{ option.name }}</a></li>
+
+{% endfor %}
+    </ul>
+{% endblock %}

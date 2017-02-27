@@ -1,0 +1,12 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}View Patient{% endblock %}
+
+{% block content %}
+    <h3>Selecting Trend for Patient - {{ patient.first_name }} {{ patient.last_name }}</h3>
+    <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

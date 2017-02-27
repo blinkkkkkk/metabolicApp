@@ -1,0 +1,18 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}Viewing Patient Submission - Metabolic App{% endblock %}
+
+{% block content %}
+    <h1>
+    {{ entry.entry_type }} from {{ patient.first_name }} {{ patient.last_name }}
+    </h1>
+        <img src="{{ entry.image }}">
+        <form method="post">
+            <input type="submit" name="option" value="Dismiss"/>
+        </form>
+
+    <a href="{% url 'Metabolic_App:view_inbox' %}"><button type="button">Back</button></a>
+    <p>Note: Back will not remove the entry from your inbox.</p>
+
+
+{% endblock %}

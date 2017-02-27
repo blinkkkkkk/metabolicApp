@@ -1,0 +1,24 @@
+{% extends 'MetabolicApp/base.html' %}
+{% load custom_filters %}
+
+{% block title %}View Patient{% endblock %}
+
+{% block content %}
+    <h3>Viewing {{ type }} Trends for Patient - {{ patient.first_name }} {{ patient.last_name }}</h3>
+    <table>
+    <tr>
+        <th>Date Created</th>
+        <th>Test Result</th>
+        <th>Clinician Message</th>
+        <th>Clinician</th>
+        <th>Recommended Next Test</th>
+    </tr>
+    {% for result in results %}
+        <td>{{ result.date_created }}</td>
+        <td>{{ result.test_data|read }}</td>
+        <td>{{ result.message }}</td>
+        <td>{{ result.clinician_id.full_name }}, {{ result.clinician_id.GMC_no }}</td>
+        <td>{{ result.next_test }}</td>
+    {% endfor %}
+    </table>
+{% endblock %}
