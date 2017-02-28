@@ -1,0 +1,14 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}Input Test Result - Metabolic App{% endblock %}
+
+{% block content %}
+    <h3>Selecting {{ type }} Trend for Patient - {{ patient.first_name }} {{ patient.last_name }}</h3>
+    <ul>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+    </form>
+    </ul>
+{% endblock %}

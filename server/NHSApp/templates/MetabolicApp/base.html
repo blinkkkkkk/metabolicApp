@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+<a href="{% url 'Metabolic_App:home' %}"><button type="button">Home page</button></a>
+<a href="{% url 'Metabolic_App:logout' %}"><button type="button">Logout</button></a>
+<br/>
+{% block content %}
+
+
+{% endblock %}
+</body>
+
+
+</html>

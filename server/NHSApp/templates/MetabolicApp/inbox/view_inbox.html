@@ -1,0 +1,24 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>
+    Personal Inbox for {{ name }}
+    </h1>
+<ul>
+    {% for entry in entries %}
+
+    <li>
+
+    {% if entry.type == "SUBMISSION" %}
+        <a href="{% url 'Metabolic_App:view_inbox_submission' entry.id %}">{{ entry.name }}</a>
+    {% else %}
+        <a href="{% url 'Metabolic_App:view_inbox_request' entry.id %}">{{ entry.name }}</a>
+    {% endif %}
+       <p>{{ entry.type }}</p>
+    <p>Date Created: {{ entry.age }} </p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

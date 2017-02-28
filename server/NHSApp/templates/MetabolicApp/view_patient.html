@@ -1,0 +1,13 @@
+{% extends 'MetabolicApp/base.html' %}
+
+{% block title %}View Patient{% endblock %}
+
+{% block content %}
+    <h3>Viewing Patient - {{ patient.first_name }} {{ patient.last_name }}</h3>
+    <ul>
+    <li>
+        <a href="{% url 'Metabolic_App:select_trends' patient.id 'view'%}">View Test Data for Patient</a>
+        <a href="{% url 'Metabolic_App:select_trends' patient.id 'input'%}">Input Test Data for Patient </a>
+    </li>
+    </ul>
+{% endblock %}
